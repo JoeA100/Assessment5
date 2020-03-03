@@ -34,8 +34,23 @@
 
 	# What was the name of the function we have seen to check the length of a container?  Use your CLI to access the Python documentation and get help(len).
 
-def one(input1, input2):
-	return ""
+def lengthof_string(str1, str2):
+	if(len(str1) == len(str2)):
+		print((str1)" + "(str2))
+		
+
+	elif(len(str1) < len(str2)):
+		print(str2)
+
+	else: 
+		print(str1)
+
+Fstring = input(str("input first word"))
+Sstring = input(str("input second word"))
+
+print("\n")
+
+lengthof_string(Fstring, Sstring)
 
 
 
@@ -86,9 +101,21 @@ def two(input):
 	# <HINT>
 
 	# No Hints for this question
-
-def three(arg1):
-	return "null"
+for fizzbuzz in range(25):
+    if fizzbuzz % 3 == 0 and fizzbuzz % 5 == 0:
+        print("fizzbuzz")
+        
+    elif fizzbuzz % 3 == 0:
+        print("fizz")
+        
+    elif fizzbuzz % 5 == 0:
+        print("buzz")
+        
+else: 
+	print("null")
+    
+	
+	
 
 
 	# <QUESTION 4>
@@ -142,7 +169,16 @@ def four(arg1):
 	# help(str) and help(list), you might also need to use a function that can create a list of numbers for you, try help(range).
 
 def five(input):
-	return []
+
+file_order = input.split(',')
+names =[]
+
+for i, wo in enumerate(file_order):
+	if wo == 'private.key':
+		if order[i+1]=='False':
+			names.append(file_order[i-1])
+		
+return names
 
 	# <QUESTION 6>
 
@@ -163,7 +199,7 @@ def five(input):
 
 
 def six(input):
-    return False
+	
 
 	# <QUESTION 7>
 
@@ -180,7 +216,9 @@ def six(input):
 	# How do we ignore case in a String? help(str) may offer some insight.
 
 def seven(input):
-    return 0
+    vowelstring = input("Please type a sentence: ")
+
+print(*map(vowelstring.lower().count, "aeiou"))
 
 	# <QUESTION 8>
 
@@ -196,10 +234,21 @@ def seven(input):
 	# <HINT>
 
 	# You may need to create a list of numbers from 0 to i, take a look at help(range).
+def multiplyList(myList) : 
+      
+    
+    result = 1
+    for x in myList: 
+         result = result * x  
+    return result  
+      
 
-def eight(input):
-	return 1
+list1 = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10]  
 
+print(multiplyList(list1)) 
+
+	
+	
 	# <QUESTION 9>
 
     # Given a string and a char, returns the position in the String where the char first appears.
@@ -219,6 +268,11 @@ def eight(input):
 	# Take a look at the documentation for Strings, List and range.
 
 def nine(inputString, char):
+	myString = "this is a Sentence"
+	 myString.find("s")
+	 myString.find("S")
+    
+	 myString.find("z")	
 	return -1
 
 	# <QUESTION 10>
